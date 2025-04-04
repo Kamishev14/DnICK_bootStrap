@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Tour</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css"/>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <style>
+
+        /* Hero section background and layout */
+        .hero {
+            background: url('cover.jpg'); /* Set the background image for the hero section */
+            height: 100vh; /* Make the hero section take up 100% of the viewport height */
+            color: white; /* Set the text color to white */
+            display: flex; /* Use Flexbox for the layout */
+            align-items: center; /* Vertically center the content inside the hero section */
+            justify-content: center; /* Horizontally center the content inside the hero section */
+            flex-direction: column; /* Stack the content vertically */
+            text-align: center; /* Center the text inside the section */
+            position: relative; /* Allow absolute positioning for elements inside it (like social buttons) */
+        }
+    
+        /* Styling for social media buttons container */
+        .social-buttons {
+            position: absolute; /* Position the social buttons absolutely relative to the hero section */
+            bottom: 20px; /* Position the buttons 20px from the bottom of the hero section */
+            left: 50%; /* Position the buttons at the center horizontally */
+            transform: translateX(-50%); /* Offset by 50% to perfectly center the buttons */
+            display: flex; /* Use Flexbox to arrange the buttons horizontally */
+            gap: 15px; /* Add 15px space between each button */
+        }
+    
+        /* Basic styling for each social media button */
+        .social-btn {
+            width: 50px; /* Set the width of each button to 50px */
+            height: 50px; /* Set the height of each button to 50px */
+            border-radius: 50%; /* Make the button circular */
+            border: 2px solid white; /* Add a white border around the button */
+            background-color: rgba(255, 255, 255, 0.6); /* Set a semi-transparent white background */
+            display: flex; /* Use Flexbox to align the logo in the center */
+            justify-content: center; /* Center the logo horizontally */
+            align-items: center; /* Center the logo vertically */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow around the button */
+            cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+        }
+    
+        /* Styling for Facebook button specifically */
+        .social-btn.facebook {
+            background-image: url('facebook-logo.png'); /* Set the background image for Facebook logo */
+            background-size: 24px; /* Resize the background image to 24px */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+        }
+    
+        /* Styling for LinkedIn button specifically */
+        .social-btn.linkedin {
+            background-image: url('linkedin-logo.png'); /* Set the background image for LinkedIn logo */
+            background-size: 24px; /* Resize the background image to 24px */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+        }
+    
+        /* Styling for Gmail button specifically */
+        .social-btn.gmail {
+            background-image: url('gmail-logo.png'); /* Set the background image for Gmail logo */
+            background-size: 24px; /* Resize the background image to 24px */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+        }
+    
+        /* Hover effect for social media buttons */
+        .social-btn.hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Make the button background slightly less transparent on hover */
+        }
+    
+        /* Contact section styling */
+        .contact-section {
+            background: #f8f9fa; /* Set a light grey background color */
+            padding: 50px; /* Add 50px padding around the contact section */
+            position: relative; /* Allow absolute positioning of elements inside */
+        }
+    
+        /* Footer styling */
+        footer {
+            background-color: #006eff; /* Set a blue background color */
+            text-align: center; /* Center the text inside the footer */
+            color: white; /* Set the text color to white */
+            padding: 20px; /* Add 20px padding inside the footer */
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: rgba(0,0,0, 0.2);">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Tours</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Advantages</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1> The Best Trips Around Iceland Begin with Us</h1>
+        <div class="d-flex justify-content-center">
+            <select class="form-select w-auto me-2">
+                <option>Date</option>
+            </select>
+            <select class="form-select w-auto me-2">
+                <option>Your Price Range</option>
+            </select>
+            <button class="btn btn-primary">Search Tours</button>
+        </div>
+
+        <!-- Social media -->
+         <div class="social-buttons">
+            <a href="#" class="social-btn facebook"></a>  
+            <a href="#" class="social-btn linkedin"></a>  
+            <a href="#" class="social-btn gmail"></a>  
+         </div>
+    </header>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Best Sellers</h2>
+        <div class="row">
+            <div class="col-md-4"><img src="sl1.jpg" class="img-fluid"><p>7 days/6 nights<strong>From $1000</strong></p><h5>Winter Wonders and Delicious Detours</h5></div>
+            <div class="col-md-4"><img src="sl2.jpg" class="img-fluid"><p>3 days/2 nights<strong>From $500</strong></p><h5>South Shore and Glacier Lagoon Mini-Tour</h5></div>
+            <div class="col-md-4"><img src="sl3.jpg" class="img-fluid"><p>1 night<strong>From $800</strong></p><h5>Northern Lights Myster</h5></div>
+            <div class="col-md-4"><img src="sl4.jpg" class="img-fluid"><p>7 days/6 nights<strong>From $900</strong></p><h5>Golden Circle Tour</h5></div>
+            <div class="col-md-4"><img src="sl5.jpg" class="img-fluid"><p>7 days/6 nights<strong>From $1200</strong></p><h5>South Iceland Winter Explorer - Super Jeep Adventure</h5></div>
+            <div class="col-md-4"><img src="sl6.jpg" class="img-fluid"><p>7 days/6 nights<strong>From $1500</strong></p><h5>South Iceland Express Road Trip</h5></div>
+        </div>
+    </section>
+
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Get in Touch</h3>
+                    <form>
+                        <input type="text" class="form-control mb-2" placeholder="Name">
+                        <input type="email" class="form-control mb-2" placeholder="E-mail">
+                        <textarea class="form-control mb-2" placeholder="Message"></textarea>
+                        <button class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3>Contact Information</h3>
+                    <p><strong>1-800-1234-567</strong></p>
+                    <p>info@info.org</p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn facebook"></a>
+                        <a href="#" class="social-btn linkedin"></a>
+                        <a href="#" class="social-btn gmail"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 FINKI | DNICK
+    </footer>
+</body>
+</html>
